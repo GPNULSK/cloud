@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud.iml" filepath="$PROJECT_DIR$/cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-server/order-server.iml" filepath="$PROJECT_DIR$/order-server/order-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/product-api/product-api.iml" filepath="$PROJECT_DIR$/product-api/product-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/products/products.iml" filepath="$PROJECT_DIR$/products/products.iml" />
+    </modules>
+  </component>
+</project>

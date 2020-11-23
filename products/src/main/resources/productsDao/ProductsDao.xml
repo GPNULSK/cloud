@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.products.dao.ProductsDao">
+  <resultMap id="BaseResultMap" type="com.example.domain.Product">
+    <id column="pid" jdbcType="INTEGER" property="pid" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_desc" jdbcType="VARCHAR" property="productDesc" />
+    <result column="inventory" jdbcType="INTEGER" property="inventory" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    pid, product_name, product_desc, inventory
+  </sql>
+
+  <select id="findByName" parameterType="String" resultMap="BaseResultMap">
+    select
+        *
+    from
+        t_products
+    where
+        product_name like CONCAT('%',#{name},'%')
+  </select>
+
+  <update id="sellProducts" parameterType="com.example.domain.Product">
+    update  t_products set inventory = #{inventory} where pid=#{pid}
+  </update>
+
+  <select id="findById" parameterType="int" resultMap="BaseResultMap">
+    select
+        *
+    from
+        t_products
+    where
+        pid=#{id}
+  </select>
+
+  <select id="findAll" resultMap="BaseResultMap">
+      select * from t_products
+  </select>
+
+</mapper>
